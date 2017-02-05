@@ -2,7 +2,7 @@
 var React = require("react");
 
 // Helper for making AJAX requests to our API
-var helpers = require("./utils/helper");
+// var helpers = require("./utils/helper");
 
 // Creating the Results component
 var Main = React.createClass({

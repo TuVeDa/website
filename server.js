@@ -6,7 +6,7 @@ var mongoose = require("mongoose");
 var request = require('request');
 
 // Require Article Schema
-var Article = require("./models/Article");
+// var Article = require("./models/Article");
 
 // Create Instance of Express
 var app = express();
@@ -21,7 +21,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("./public"));
-
+ 
 // -------------------------------------------------
 
 // MongoDB Configuration configuration (Change this URL to your own DB)
