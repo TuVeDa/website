@@ -18,21 +18,14 @@ var Main = React.createClass({
 				{/*navigation bar*/}
 				<nav className="navbar navbar-default navbar-fixed-top ">
 					<div className="container">
-						<a className="navbar-brand " href="#">NYT React</a>
+						<a className="navbar-brand " href="#">Tuveda</a>
 						<ul className="nav navbar-nav navbar-right">
-					    	<li><a href="#">Search</a></li>
-					    	<li><a href="#">Saved</a></li>
-					    	<li><a href="#">About</a></li>
+					    	<li><a href="#">Our Team</a></li>
+					    	<li><a href="#">Our Projects</a></li>
+					    	<li><a href="#">Contact Us</a></li>
 					    </ul>
 					</div>
 				</nav>
-
-				{/* Jumbotron*/}
-				<div className="jumbotron text-center">
-					<h1>New York Times Article Scrapper</h1>
-					<p>Search and save articles</p>
-					<p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-				</div>
 
 			</div>
 		);

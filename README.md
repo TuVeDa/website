@@ -9,6 +9,6 @@ Website built with MERN stack.
 * CSS
 
 ###Team
-G. Conty @contygm
-T. Davis @TurnerMooreDavis
+* G. Conty @contygm
+* T. Davis @TurnerMooreDavis
 
