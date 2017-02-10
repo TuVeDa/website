@@ -16,7 +16,7 @@ var Main = React.createClass({
 		return (
 			<div className="container">
 				{/*navigation bar*/}
-				<nav className="navbar navbar-default navbar-fixed-top ">
+				<nav className="navbar navbar-default navbar-fixed-top" id="navbar">
 					<div className="container">
 						<a className="navbar-brand " href="#">Tuveda</a>
 						<ul className="nav navbar-nav navbar-right">

@@ -1,9 +1,14 @@
+
+
 .navbar{
-	color: white;
 	background-color: #054593;
 }
 
-.navbar li:hover{
-	color: #54DADA;
+#navbar a{
+	color: white;
+}
+
+.nav.navbar-nav.navbar-right li a:hover{
+	color: white;
 	background-color: #54DADA;
 }
