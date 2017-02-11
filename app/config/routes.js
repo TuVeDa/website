@@ -20,7 +20,10 @@ var IndexRoute = router.IndexRoute;
 
 // Reference the high-level components
 var Main = require("../components/Main");
+var Landing = require("../components/children/Landing");
 var Contact = require("../components/children/Contact");
+var Portfolio = require("../components/children/Portfolio");
+var Team = require("../components/children/Team");
 
 // Export the Routes
 module.exports = (
@@ -28,11 +31,15 @@ module.exports = (
   // The high level component is the Router component
   <Router history={hashHistory}>
 
+  	{/* navbar */}
     <Route path="/" component={Main}>
-
-      {/* If user selects Child2 then show the appropriate component*/}
+      
+      <Route path="Landing" component={Landing} />
       <Route path="Contact" component={Contact} />
+      <Route path="Portfolio" component={Portfolio} />
+      <Route path="Team" component={Team} />
 
+      <IndexRoute component={Landing} />
     </Route>
   </Router>
 );

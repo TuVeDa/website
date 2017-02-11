@@ -27,14 +27,14 @@ var Main = React.createClass({
 						        <span className="icon-bar"></span>
 						        <span className="icon-bar"></span>
 						    </button>
-					      	<a className="navbar-brand" href="#">TuVeda</a>
+					      	<a className="navbar-brand" href="#/Landing">TuVeda</a>
 					    </div>
 
 					    {/*Collect the nav links, forms, and other content for toggling */}
 					    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					      <ul className="nav navbar-nav navbar-right">
-					        <li><a href="#">Our Team</a></li>
-					        <li><a href="#">Our Projects</a></li>
+					        <li><a href="#/Team">Our Team</a></li>
+					        <li><a href="#/Portfolio">Our Projects</a></li>
 					        <li><a href="#/Contact">Contact Us</a></li>
 					      </ul>
 					    </div>
