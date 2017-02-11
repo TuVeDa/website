@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-var Contact = require("./children/Contact");
+// var Contact = require("./children/Contact");
 
 // Helper for making AJAX requests to our API
 // var helpers = require("./utils/helper");
@@ -35,15 +35,18 @@ var Main = React.createClass({
 					      <ul className="nav navbar-nav navbar-right">
 					        <li><a href="#">Our Team</a></li>
 					        <li><a href="#">Our Projects</a></li>
-					        <li><a href="#">Contact Us</a></li>
+					        <li><a href="#/Contact">Contact Us</a></li>
 					      </ul>
 					    </div>
 					</div>
 				</nav>
 
-				<div className="container-fluid">
-					<Contact/>
-				</div>
+				<div className="row">
+
+		          {/* This code will dump the correct Child Component */}
+		          {this.props.children}
+
+		        </div>
 
 			</div>
 		);
