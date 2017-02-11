@@ -4,7 +4,7 @@ var React = require("react");
 // var Contact = require("./children/Contact");
 
 // Helper for making AJAX requests to our API
-// var helpers = require("./utils/helper");
+// var helpers = require("./utils/routes");
 
 // Creating the Results component
 var Main = React.createClass({
@@ -41,7 +41,7 @@ var Main = React.createClass({
 					</div>
 				</nav>
 
-				<div className="row">
+				<div className="container">
 
 		          {/* This code will dump the correct Child Component */}
 		          {this.props.children}
