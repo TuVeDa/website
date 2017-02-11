@@ -1,6 +1,8 @@
 // Include React
 var React = require("react");
 
+var Contact = require("./children/Contact");
+
 // Helper for making AJAX requests to our API
 // var helpers = require("./utils/helper");
 
@@ -38,6 +40,11 @@ var Main = React.createClass({
 					    </div>
 					</div>
 				</nav>
+
+				<div className="container-fluid">
+					<Contact/>
+				</div>
+
 			</div>
 		);
 	}
