@@ -1,8 +1,6 @@
 // Include React
 var React = require("react");
 
-// var Contact = require("./children/Contact");
-
 // Helper for making AJAX requests to our API
 // var helpers = require("./utils/routes");
 

@@ -34,12 +34,13 @@ module.exports = (
   	{/* navbar */}
     <Route path="/" component={Main}>
       
-      <Route path="Landing" component={Landing} />
-      <Route path="Contact" component={Contact} />
-      <Route path="Portfolio" component={Portfolio} />
-      <Route path="Team" component={Team} />
+	    <Route path="Landing" component={Landing} />
+	    <Route path="Contact" component={Contact} />
+	    <Route path="Portfolio" component={Portfolio} />
+	    <Route path="Team" component={Team} />
 
-      <IndexRoute component={Landing} />
+  		{/* default route if all else fails */}
+    	<IndexRoute component={Landing} />
     </Route>
   </Router>
 );

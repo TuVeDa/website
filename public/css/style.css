@@ -21,3 +21,19 @@ http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
 	color: white;
 	background-color: #54DADA;
 }
+
+h1 {
+	text-align: center;
+}
+
+.profBox{
+	text-align: center;
+}
+
+.profPic{
+	width: 10em;
+	height: 10em;
+	border-radius: 10em;
+	margin: auto;
+	display: block;
+}
