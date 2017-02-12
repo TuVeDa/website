@@ -20,7 +20,7 @@ var Team = React.createClass({
 						<p className="subheading">Web Developer</p>
 						<p>I love tart gummi bears. Brownie apple pie bear claw icing jujubes croissant candy canes ice cream. I love biscuit chocolate bar caramels. Gummies tootsie roll tiramisu pudding apple pie cookie oat cake dessert.</p>
 					</div>
-					<div className="col-md-4 proilefBox" id="rightBox">
+					<div className="col-md-4 profileBox" id="rightBox">
 						<img src="img/blankProf.png" className="profilePic" id="david"/>
 						<h4>David</h4>
 						<p className="subheading">SEO Specialist</p>
