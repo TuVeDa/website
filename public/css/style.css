@@ -27,18 +27,36 @@ h1 {
 }
 
 /* Team Page */
-#profRow{
+#profileRow{
 	margin-top: 3em;
 }
 
-.profBox{
+.profileBox{
 	text-align: center;
 }
 
-.profPic{
+.profilePic{
 	width: 10em;
 	height: 10em;
 	border-radius: 10em;
+	margin: auto;
+	display: block;
+}
+
+/* Project Page*/
+#projectRow{
+	margin-top: 3em;
+	text-align: center;
+}
+
+#leftProject {
+  border-right: 1px solid lightgrey;
+}
+
+.screenShot{
+	width: 20em;
+	height: 20em;
+	border-radius: 2em;
 	margin: auto;
 	display: block;
 }

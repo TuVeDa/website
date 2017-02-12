@@ -6,7 +6,8 @@ var Contact = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<form>
+				<h1 className="row">Contact Us</h1>
+				<form className="row">
 				  <div className="form-group">
 				    <label for="exampleInputEmail1">Name</label>
 				    <input type="email" className="form-control" id="name" placeholder="Your Name"/>

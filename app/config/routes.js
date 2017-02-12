@@ -22,7 +22,7 @@ var IndexRoute = router.IndexRoute;
 var Main = require("../components/Main");
 var Landing = require("../components/children/Landing");
 var Contact = require("../components/children/Contact");
-var Portfolio = require("../components/children/Portfolio");
+var Project = require("../components/children/Project");
 var Team = require("../components/children/Team");
 
 // Export the Routes
@@ -36,7 +36,7 @@ module.exports = (
       
 	    <Route path="Landing" component={Landing} />
 	    <Route path="Contact" component={Contact} />
-	    <Route path="Portfolio" component={Portfolio} />
+	    <Route path="Project" component={Project} />
 	    <Route path="Team" component={Team} />
 
   		{/* default route if all else fails */}
