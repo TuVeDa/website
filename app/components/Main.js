@@ -7,8 +7,8 @@ var React = require("react");
 // Creating the Results component
 var Main = React.createClass({
 	// getInitialState: function(){
-	// 	return { 
-			
+	// 	return {
+
 	// 	};
 	// },
 	// Here we render the function
@@ -29,7 +29,7 @@ var Main = React.createClass({
 
 				{/* Jumbotron*/}
 				<div className="jumbotron text-center">
-					<h1>New York Times Article Scrapper</h1>
+					<h1>New York Times Article Stuff</h1>
 					<p>Search and save articles</p>
 					<p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 				</div>
