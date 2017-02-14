@@ -1,0 +1,73 @@
+
+/*  http://www.intimateweddings.com/blog/five-color-palettes-cobalt-blue/  */
+/* Title Font:
+
+http://www.dafont.com/xperia.font?text=tuveda&fpp=100&psize=l
+
+Possible Sub Font
+
+http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
+
+*/
+.navbar {
+	background-color: #054593;
+	
+}
+
+
+
+.nav.navbar-nav.navbar-right a{
+	color: white;
+}
+
+.nav.navbar-nav.navbar-right li a:hover{
+	color: white;
+	background-color: #54DADA;
+}
+
+#title{
+	color: white;
+}
+
+h1 {
+	text-align: center;
+}
+
+/* Team Page */
+#profileRow{
+	margin-top: 3em;
+}
+
+.profileBox{
+	text-align: center;
+}
+
+.profilePic{
+	width: 10em;
+	height: 10em;
+	border-radius: 10em;
+	margin: auto;
+	display: block;
+}
+
+/* Project Page*/
+#projectRow{
+	margin-top: 3em;
+	text-align: center;
+}
+
+#leftProject {
+  border-right: 1px solid lightgrey;
+}
+
+.screenShot{
+	width: 20em;
+	height: 20em;
+	border-radius: 2em;
+	margin: auto;
+	display: block;
+}
+
+.technologies{
+	list-style-type: none;
+}
