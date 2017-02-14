@@ -2,7 +2,7 @@
 var React = require("react");
 
 // Helper for making AJAX requests to our API
-// var helpers = require("./utils/helper");
+// var helpers = require("./utils/routes");
 
 // Creating the Results component
 var Main = React.createClass({
@@ -14,25 +14,37 @@ var Main = React.createClass({
 	// Here we render the function
 	render: function() {
 		return (
-			<div className="container">
-				{/*navigation bar*/}
-				<nav className="navbar navbar-default navbar-fixed-top ">
-					<div className="container">
-						<a className="navbar-brand " href="#">NYT React</a>
-						<ul className="nav navbar-nav navbar-right">
-					    	<li><a href="#">Search</a></li>
-					    	<li><a href="#">Saved</a></li>
-					    	<li><a href="#">About</a></li>
-					    </ul>
+			<div>
+				<nav className="navbar navbar-default">
+					<div className="container-fluid">
+					    {/*Brand and toggle get grouped for better mobile display */}
+					    <div className="navbar-header">
+					    	<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span className="sr-only">Toggle navigation</span>
+						        <span className="icon-bar"></span>
+						        <span className="icon-bar"></span>
+						        <span className="icon-bar"></span>
+						    </button>
+					      	<a id="title" className="navbar-brand" href="#/Landing">TuVeda</a>
+					    </div>
+
+					    {/*Collect the nav links, forms, and other content for toggling */}
+					    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      <ul className="nav navbar-nav navbar-right">
+					        <li><a href="#/Team">Our Team</a></li>
+					        <li><a href="#/Project">Our Projects</a></li>
+					        <li><a href="#/Contact">Contact Us</a></li>
+					      </ul>
+					    </div>
 					</div>
 				</nav>
 
-				{/* Jumbotron*/}
-				<div className="jumbotron text-center">
-					<h1>New York Times Article Scrapper</h1>
-					<p>Search and save articles</p>
-					<p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-				</div>
+				<div className="container">
+
+		          {/* This code will dump the correct Child Component */}
+		          {this.props.children}
+
+		        </div>
 
 			</div>
 		);
