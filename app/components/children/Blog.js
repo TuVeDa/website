@@ -1,15 +1,15 @@
 // Include React
 var React = require("react");
 
-var Landing = React.createClass({
+var Blog = React.createClass({
 
 	render: function(){
 		return (
 			<div>
-				<h1>Landing</h1>
+				<h1>Blog</h1>
 			</div>
 		)
 	}
 })
 
-module.exports = Landing;
+module.exports = Blog;

@@ -24,6 +24,8 @@ var Landing = require("../components/children/Landing");
 var Contact = require("../components/children/Contact");
 var Project = require("../components/children/Project");
 var Team = require("../components/children/Team");
+var Blog = require("../components/children/Blog");
+
 
 // Export the Routes
 module.exports = (
@@ -33,11 +35,12 @@ module.exports = (
 
   	{/* navbar */}
     <Route path="/" component={Main}>
-      
+
 	    <Route path="Landing" component={Landing} />
 	    <Route path="Contact" component={Contact} />
 	    <Route path="Project" component={Project} />
 	    <Route path="Team" component={Team} />
+      <Route path="Blog" component={Blog} />
 
   		{/* default route if all else fails */}
     	<IndexRoute component={Landing} />

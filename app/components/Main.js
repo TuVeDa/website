@@ -24,6 +24,7 @@ var Main = React.createClass({
 						        <span className="icon-bar"></span>
 						        <span className="icon-bar"></span>
 						        <span className="icon-bar"></span>
+										<span className="icon-bar"></span>
 						    </button>
 					      	<a id="title" className="navbar-brand" href="#/Landing">TuVeda</a>
 					    </div>
@@ -34,6 +35,7 @@ var Main = React.createClass({
 					        <li><a href="#/Team">Our Team</a></li>
 					        <li><a href="#/Project">Our Projects</a></li>
 					        <li><a href="#/Contact">Contact Us</a></li>
+									<li><a href="#/Blog">Blog</a></li>
 					      </ul>
 					    </div>
 					</div>
