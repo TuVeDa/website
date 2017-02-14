@@ -9,12 +9,16 @@ Possible Sub Font
 http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
 
 */
+
+h1 {
+	text-align: center;
+}
+
+/* navbar */
 .navbar {
 	background-color: #054593;
 	
 }
-
-
 
 .nav.navbar-nav.navbar-right a{
 	color: white;
@@ -29,13 +33,15 @@ http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
 	color: white;
 }
 
-h1 {
-	text-align: center;
+/* landing page*/
+
+#titleRow{
+	/*height: 100%;*/
 }
 
 /* Team Page */
 #profileRow{
-	margin-top: 3em;
+	/*margin-top: 3em;*/
 }
 
 .profileBox{
@@ -52,7 +58,7 @@ h1 {
 
 /* Project Page*/
 #projectRow{
-	margin-top: 3em;
+	/*margin-top: 3em;*/
 	text-align: center;
 }
 
