@@ -39,7 +39,7 @@ var Main = React.createClass({
 					</div>
 				</nav>
 
-				<div className="container">
+				<div className="container" id="childContainer">
 
 		          {/* This code will dump the correct Child Component */}
 		          {this.props.children}
