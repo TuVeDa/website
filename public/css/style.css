@@ -8,34 +8,78 @@ Possible Sub Font
 
 http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
 
+KEY Color: 0A46F9; ---> http://paletton.com/
+
 */
+
+h1 {
+	text-align: center;
+}
+
+/* navbar */
 .navbar {
-	background-color: #054593;
+	background-color: #02DAF8;
+	/*background: -webkit-linear-gradient(left, #05E0FF, #0A45F9);*/
 	
 }
 
-
-
+/* navbar right buttons*/
 .nav.navbar-nav.navbar-right a{
 	color: white;
 }
 
 .nav.navbar-nav.navbar-right li a:hover{
-	color: white;
-	background-color: #54DADA;
+	color: lightgrey;
+	background-color: #0A45F9;
+
 }
 
 #title{
 	color: white;
 }
 
-h1 {
-	text-align: center;
+#title:hover{
+	color: #0A45F9;
+}
+
+/*Child container in main*/
+
+#childContainer{
+	/*position: relative;*/
+	/*height: 100%;*/
+	display: flex;
+ 	justify-content: center;
+  	align-items: center;
+}
+
+/* landing page*/
+
+.titleRow{
+	/*height: 100%;*/
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}	
+
+#landingTitle{
+	/*color: #FFAE00;*/
+
+    background: -webkit-linear-gradient(right bottom, #02DAF8, #0A45F9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+	font-weight: bold;
+	font-size: 6em;
+}
+
+#subTitle{
+	color: grey;
 }
 
 /* Team Page */
 #profileRow{
-	margin-top: 3em;
+	/*margin-top: 3em;*/
 }
 
 .profileBox{
@@ -52,7 +96,7 @@ h1 {
 
 /* Project Page*/
 #projectRow{
-	margin-top: 3em;
+	/*margin-top: 3em;*/
 	text-align: center;
 }
 

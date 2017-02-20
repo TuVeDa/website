@@ -25,7 +25,7 @@ var Main = React.createClass({
 						        <span className="icon-bar"></span>
 						        <span className="icon-bar"></span>
 						    </button>
-					      	<a id="title" className="navbar-brand" href="#/Landing">TuVeda</a>
+					      	<a id="title" className="navbar-brand" href="#/Landing">TUVEDA</a>
 					    </div>
 
 					    {/*Collect the nav links, forms, and other content for toggling */}
@@ -39,7 +39,7 @@ var Main = React.createClass({
 					</div>
 				</nav>
 
-				<div className="container">
+				<div className="container" id="childContainer">
 
 		          {/* This code will dump the correct Child Component */}
 		          {this.props.children}
