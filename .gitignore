@@ -3,6 +3,8 @@ logs
 *.log
 npm-debug.log*
 
+public/bundle.js
+
 # Runtime data
 pids
 *.pid
