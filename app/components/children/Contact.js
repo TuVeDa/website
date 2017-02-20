@@ -36,7 +36,7 @@ var Contact = React.createClass({
 				  </div>
 				  <div className="form-group col-md-12">
 				    
-				    <button type="submit" className="btn btn-default ">Submit</button>
+				    <button type="submit" className="btn btn-default waves-effect waves-light">Submit</button>
 				  </div>
 				  
 				</form>

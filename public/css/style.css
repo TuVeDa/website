@@ -11,6 +11,13 @@ http://www.dafont.com/zekton.font?text=What+We+Do+Here&fpp=100&psize=xs
 KEY Color: 0A46F9; ---> http://paletton.com/
 
 */
+html,body {
+    height:100%;
+    margin:0;
+    padding:0;
+    /*background-image: url("../img/cup.jpg");
+    background-size: cover; */
+}
 
 h1 {
 	text-align: center;
@@ -44,15 +51,24 @@ h1 {
 
 /*Child container in main*/
 
+
+
 #childContainer{
 	/*position: relative;*/
-	/*height: 100%;*/
+	height: 100%;
+	width: 100%;
 	display: flex;
  	justify-content: center;
   	align-items: center;
+  	
+  	
 }
 
 /* landing page*/
+
+#landingWindow{
+	
+}
 
 .titleRow{
 	/*height: 100%;*/
