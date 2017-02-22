@@ -32,12 +32,13 @@ var Contact =  React.createClass ({
 	  .catch(function (error) {
 	    console.log(error);
 			message = error;
-	  }).finally(
+	  })
+		.finally(function) {
 			this.setState({
 				confirmationText: message,
 				showConfirmation: true
 			});
-		);
+		});
 	},
 
 
@@ -96,7 +97,7 @@ var ContactForm = React.createClass ({
 			</div>
 		);
 	}
-)};
+});
 
 
 module.exports = Contact;
