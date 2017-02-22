@@ -17,7 +17,7 @@ var Contact =  React.createClass ({
 		var form = e.target;
 		var message = "";
 		console.log(e.target);
-		var message = "";
+		var contact = this;
 		axios.post('/contact',{
 	    name: document.querySelector("#name").value,
 	    companyName: document.querySelector("#company-name").value,
@@ -29,18 +29,24 @@ var Contact =  React.createClass ({
 	  .then(function (response) {
 			console.log(response)
 			message = "Thanks for contacting us! We will get back to you as soon as we can!";
+			contact.setState({
+				confirmationText: message,
+				showConfirmation: true
+			});
 	  })
 	  .catch(function (error) {
 	    console.log(error);
 			message = "There was a problem";
-	  });
-		this.setState({
-			confirmationText: message,
-			showConfirmation: true
-		});
+			contact.setState({
+				confirmationText: message,
+				showConfirmation: true
+			});
+		})
 	},
 
 	confirmationText: function(){
+		console.log("another line");
+		console.log("showing confirmation text", this.state.confirmationText);
 		return this.state.confirmationText;
 	},
 
