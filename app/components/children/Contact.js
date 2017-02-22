@@ -3,13 +3,19 @@ var React = require("react");
 // axios for post to server
 var axios = require("axios");
 
-var Contact = React.createClass({
+var Contact =  React.createClass ({
+
+	getInitialState: function() {
+		return {
+			showConfirmation: false,
+			confirmationText : ""
+		};
+	},
 
 	submitContact: function(e){
-		var form = e.target
-
+		var form = e.target;
 		console.log(e.target);
-		console.log("were submitting");
+		var message = "";
 		axios.post('/contact',{
 	    name: document.querySelector("#name").value,
 	    companyName: document.querySelector("#company-name").value,
@@ -19,15 +25,38 @@ var Contact = React.createClass({
 			newsletter: document.querySelector("#newsletter").value
 	  })
 	  .then(function (response) {
+			this.context.router.transitionTo("#/Confirmation");
 	    console.log(response);
+			message = response;
 	  })
 	  .catch(function (error) {
 	    console.log(error);
-	  });
+			message = error;
+	  }).finally(
+			this.setState({
+				confirmationText: message,
+				showConfirmation: true
+			});
+		);
 	},
 
 
 	render: function(){
+		if (this.state.showConfirmation) {
+			return (
+				<Confirmation message={this.state.confirmationText} />
+			);
+		} else {
+			return (
+				<ContactForm sumitContact={this.submitContact}/>
+			);
+		}
+	}
+});
+
+var ContactForm = React.createClass ({
+
+	render: function() {
 		return (
 			<div>
 				<h1 className="row">Contact Us</h1>
@@ -65,8 +94,9 @@ var Contact = React.createClass({
 
 				</form>
 			</div>
-		)
+		);
 	}
-});
+)};
+
 
 module.exports = Contact;

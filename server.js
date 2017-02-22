@@ -11,6 +11,7 @@ var xoauth2 = require("xoauth2");
 // var Article = require("./models/Article");
 
 // Create Instance of Express
+
 var app = express();
 // Sets an initial port. We'll use this later in our listener
 var PORT = process.env.PORT || 3000;
@@ -80,8 +81,8 @@ app.post("/contact", function(req,res) {
       }
       console.log('Message %s sent: %s', info.messageId, info.response);
   });
+  res.send("OK");
 });
-
 // -------------------------------------------------
 
 // Listener
