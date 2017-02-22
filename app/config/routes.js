@@ -24,7 +24,6 @@ var Landing = require("../components/children/Landing");
 var Contact = require("../components/children/Contact");
 var Project = require("../components/children/Project");
 var Team = require("../components/children/Team");
-var Confirmation = require("../components/children/Confirmation");
 
 
 // Export the Routes
@@ -40,7 +39,6 @@ module.exports = (
 	    <Route path="Contact" component={Contact} />
 	    <Route path="Project" component={Project} />
 	    <Route path="Team" component={Team} />
-      <Route path="Confirmation" component={Confirmation} />
 
 
   		{/* default route if all else fails */}

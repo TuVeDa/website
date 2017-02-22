@@ -13,7 +13,9 @@ var Contact =  React.createClass ({
 	},
 
 	submitContact: function(e){
+		e.preventDefault();
 		var form = e.target;
+		var message = "";
 		console.log(e.target);
 		var message = "";
 		axios.post('/contact',{
@@ -25,31 +27,32 @@ var Contact =  React.createClass ({
 			newsletter: document.querySelector("#newsletter").value
 	  })
 	  .then(function (response) {
-			this.context.router.transitionTo("#/Confirmation");
-	    console.log(response);
-			message = response;
+			console.log(response)
+			message = "Thanks for contacting us! We will get back to you as soon as we can!";
 	  })
 	  .catch(function (error) {
 	    console.log(error);
-			message = error;
-	  })
-		.finally(function) {
-			this.setState({
-				confirmationText: message,
-				showConfirmation: true
-			});
+			message = "There was a problem";
+	  });
+		this.setState({
+			confirmationText: message,
+			showConfirmation: true
 		});
+	},
+
+	confirmationText: function(){
+		return this.state.confirmationText;
 	},
 
 
 	render: function(){
 		if (this.state.showConfirmation) {
 			return (
-				<Confirmation message={this.state.confirmationText} />
+				<Confirmation showConfirmationText={this.confirmationText} />
 			);
 		} else {
 			return (
-				<ContactForm sumitContact={this.submitContact}/>
+				<ContactForm submitContact={this.submitContact}/>
 			);
 		}
 	}
@@ -61,7 +64,7 @@ var ContactForm = React.createClass ({
 		return (
 			<div>
 				<h1 className="row">Contact Us</h1>
-				<form className="row" onSubmit={this.submitContact}>
+				<form className="row" onSubmit={this.props.submitContact}>
 				  <div className="form-group col-md-6">
 				    <label htmlFor="name">Name</label>
 				    <input type="text" className="form-control" id="name" placeholder="Your Name"/>
@@ -96,6 +99,18 @@ var ContactForm = React.createClass ({
 				</form>
 			</div>
 		);
+	}
+});
+
+var Confirmation = React.createClass({
+
+	render: function(){
+		return (
+			<div>
+				<h1 className="row">Confirmation</h1>
+        <div className="row">{this.props.showConfirmationText()}</div>
+			</div>
+		)
 	}
 });
 
