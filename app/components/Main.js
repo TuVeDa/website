@@ -10,7 +10,7 @@ var Main = React.createClass({
 	// 	return { 
 			
 	// 	};
-	// },
+	// },_
 	// Here we render the function
 	render: function() {
 		return (
