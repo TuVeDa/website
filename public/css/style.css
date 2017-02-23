@@ -15,8 +15,7 @@ html,body {
     height:100%;
     margin:0;
     padding:0;
-    /*background-image: url("../img/cup.jpg");
-    background-size: cover; */
+    
 }
 
 h1 {
@@ -75,7 +74,15 @@ h1 {
 /* landing page section */
 
 #landingWindow{
-	
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-image: url("../img/cup.jpg");
+    background-size: cover; 
 }
 
 .titleRow{
@@ -85,14 +92,10 @@ h1 {
   	left: 50%;
   	transform: translate(-50%, -50%);
   	text-align: center;
+  	opacity: none;
 }	
 
 #landingTitle{
-
-    /*background: -webkit-linear-gradient(top left, #79EEFE, #6087FD);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
-
 	font-weight: bold;
 	font-size: 6em;
 	color: #02DAF8;
@@ -103,12 +106,9 @@ h1 {
 }
 
 #subTitle{
-	color: grey;
+	color: #0A45F9;
+	opacity: 1.0;
 }
-
-
-
-
 
 /* Team Page */
 #profileRow{

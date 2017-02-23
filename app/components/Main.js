@@ -12,6 +12,7 @@ var Main = React.createClass({
 	// 	};
 	// },_
 	// Here we render the function
+
 	render: function() {
 		return (
 			<div>
@@ -39,7 +40,7 @@ var Main = React.createClass({
 					</div>
 				</nav>
 
-				<div className="container" id="childContainer">
+				<div className="container-fluid" id="childContainer">
 
 		          {/* This code will dump the correct Child Component */}
 		          {this.props.children}

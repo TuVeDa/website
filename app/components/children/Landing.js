@@ -17,6 +17,7 @@ var Landing = React.createClass({
 					</h1>
 					<p id="subTitle">Brownie macaroon carrot cake. Icing I love soufflé oat cake macaroon. Chupa chups gummies sesame snaps caramels I love cupcake carrot cake. </p>
 				</div>
+				
 			</div>
 		)
 	}
