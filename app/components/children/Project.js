@@ -6,7 +6,7 @@ var Project = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">Project</h1>
+				<h1 className="row sectionTitle">Project</h1>
 				<div className="row" id="projectRow">
 					{/* Veev's site */}
 					<div className="col-md-6" id="leftProject">

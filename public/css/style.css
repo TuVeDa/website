@@ -81,7 +81,7 @@ h1 {
     position: absolute;
     width: auto;
     height: auto;
-    background-image: url("../img/cup.jpg");
+    background-image: url("../img/cubes.jpg");
     background-size: cover; 
 }
 
@@ -92,7 +92,7 @@ h1 {
   	left: 50%;
   	transform: translate(-50%, -50%);
   	text-align: center;
-  	opacity: none;
+  	opacity: 1.0;
 }	
 
 #landingTitle{
@@ -110,7 +110,22 @@ h1 {
 	opacity: 1.0;
 }
 
+
 /* Team Page */
+
+#teamRow{
+	position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
+  	margin: 0 10px 0 10px;
+}
+
+.sectionTitle{
+	font-size: 4em;
+	margin-bottom: 1em;
+}
+
+
 #profileRow{
 	/*margin-top: 3em;*/
 }

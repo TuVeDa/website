@@ -5,8 +5,8 @@ var Team = React.createClass({
 
 	render: function(){
 		return (
-			<div>
-				<h1 className="row">Our Team</h1>
+			<div id="teamRow">
+				<h1 className="row sectionTitle" >Our Team</h1>
 				<div className="row" id="profRow">
 					<div className="col-md-4 profileBox" id="leftBox">
 						<img src="img/blankProf.png" className="profilePic" id="turner"/>

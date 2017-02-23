@@ -6,7 +6,7 @@ var Contact = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">Contact Us</h1>
+				<h1 className="row sectionTitle">Contact Us</h1>
 				<form className="row">
 				  <div className="form-group col-md-6">
 				    <label for="exampleInputEmail1">Name</label>
