@@ -60,20 +60,14 @@ app.post("/contact", function(req,res) {
 //     console.log(error);
 //   })
 
-  console.log(process.env.GMAIL);
 
-  try {
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL,
-        pass: process.env.GMAIL_PASSWORD
-      }
-    });
-  } catch (err) {
-    res.status(500).send('email attempt failed!');
-  }
-
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL,
+      pass: process.env.GMAIL_PASSWORD
+    }
+  });
 
   var html = "<b>"
   html += "Name: " + req.body.name + "<br>";
