@@ -22,7 +22,11 @@ h1 {
 	text-align: center;
 }
 
-/* navbar section */
+/* 
+
+SECTION: navbar  
+
+*/
 .navbar {
 	background-color: #02DAF8;
 	/*background: -webkit-linear-gradient(left, #05E0FF, #0A45F9);*/
@@ -60,7 +64,13 @@ h1 {
 	color: #5D85FD;
 }
 
-/*Child container in main*/
+/* 
+
+SECTION: child container 
+
+**(in main with navbag)**
+
+*/
 
 #childContainer{
 	/*position: relative;*/
@@ -111,7 +121,11 @@ h1 {
 }
 
 
-/* Team Page */
+/* 
+
+SECTION: Team page, about us 
+
+*/
 
 #teamRow{
 	/*position: absolute;
@@ -142,7 +156,11 @@ h1 {
 	display: block;
 }
 
-/* Project Page section*/
+/* 
+
+SECTION: Projects, portfolio 
+
+*/
 #projectRow{
 	/*margin-top: 3em;*/
 	text-align: center;
