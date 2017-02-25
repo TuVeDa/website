@@ -60,6 +60,8 @@ app.post("/contact", function(req,res) {
 //     console.log(error);
 //   })
 
+  console.log(process.env.GMAIL);
+
   try {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
