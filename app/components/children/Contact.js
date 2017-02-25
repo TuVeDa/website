@@ -8,7 +8,8 @@ var Contact =  React.createClass ({
 	getInitialState: function() {
 		return {
 			showConfirmation: false,
-			confirmationText : ""
+			confirmationText : "",
+			confirmationHeader : ""
 		};
 	},
 
@@ -18,7 +19,7 @@ var Contact =  React.createClass ({
 		var message = "";
 		console.log(e.target);
 		var contact = this;
-		axios.post('/contact',{
+		axios.post('/contact', {
 	    name: document.querySelector("#name").value,
 	    companyName: document.querySelector("#company-name").value,
 	    email: document.querySelector("#email").value,
@@ -27,34 +28,32 @@ var Contact =  React.createClass ({
 			newsletter: document.querySelector("#newsletter").value
 	  })
 	  .then(function (response) {
-			console.log(response)
-			message = "Thanks for contacting us! We will get back to you as soon as we can!";
+			console.log(response);
+
 			contact.setState({
-				confirmationText: message,
+				confirmationText: "Your message has been successfully submitted.  We will get back to you soon!",
+				confirmationHeader: "Thank You!"
 				showConfirmation: true
 			});
 	  })
 	  .catch(function (error) {
 	    console.log(error);
-			message = "There was a problem";
+
 			contact.setState({
-				confirmationText: message,
+				confirmationText: "Please refresh and try again!",
+				confirmationHeader: "Oooops!",
 				showConfirmation: true
 			});
 		})
 	},
 
-	confirmationText: function(){
-		console.log("another line");
-		console.log("showing confirmation text", this.state.confirmationText);
-		return this.state.confirmationText;
-	},
-
-
 	render: function(){
 		if (this.state.showConfirmation) {
 			return (
-				<Confirmation showConfirmationText={this.confirmationText} />
+				<Confirmation
+					showConfirmationText={this.state.confirmationText}
+					showConfirmationHeader={this.state.confirmationHeader}
+			 	/>
 			);
 		} else {
 			return (
@@ -113,8 +112,8 @@ var Confirmation = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">Confirmation</h1>
-        <div className="row">{this.props.showConfirmationText()}</div>
+				<h1 className="row">{this.props.showConfirmationHeader}Thank You!</h1>
+        <div className="row">{this.props.showConfirmationText}</div>
 			</div>
 		)
 	}
