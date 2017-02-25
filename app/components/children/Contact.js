@@ -32,7 +32,7 @@ var Contact =  React.createClass ({
 
 			contact.setState({
 				confirmationText: "Your message has been successfully submitted.  We will get back to you soon!",
-				confirmationHeader: "Thank You!"
+				confirmationHeader: "Thank You!",
 				showConfirmation: true
 			});
 	  })
@@ -41,7 +41,7 @@ var Contact =  React.createClass ({
 
 			contact.setState({
 				confirmationText: "Please refresh and try again!",
-				confirmationHeader: "Oooops!",
+				confirmationHeader: "Ooops!",
 				showConfirmation: true
 			});
 		})
@@ -112,7 +112,7 @@ var Confirmation = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">{this.props.showConfirmationHeader}Thank You!</h1>
+				<h1 className="row">{this.props.showConfirmationHeader}</h1>
         <div className="row">{this.props.showConfirmationText}</div>
 			</div>
 		)

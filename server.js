@@ -6,6 +6,7 @@ var mongoose = require("mongoose");
 var request = require('request');
 var nodemailer = require('nodemailer');
 var xoauth2 = require("xoauth2");
+var axios = require("axios");
 
 // Require Article Schema
 // var Article = require("./models/Article");
@@ -47,15 +48,30 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/contact", function(req,res) {
-  console.log("request body is", req.body);
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'turnermdavis@gmail.com',
-      pass: 'gravityv01ce'
-    }
-  });
+// app.post("/contact", function(req,res) {
+//   console.log("request body is", req.body);
+//
+//   axios.get("https://api.heroku.com/apps/sheltered-wave-77248/config-vars",
+//   {
+//     headers: { "Accept" : "application/vnd.heroku+json; version=3"}
+//   }).then(function(response) {
+//     console.log(response);
+//   }).catch(function(error) {
+//     console.log(error);
+//   })
+
+  try {
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL,
+        pass: process.env.GMAIL_PASSWORD
+      }
+    });
+  } catch (err) {
+    res.status(500).send('email attempt failed!');
+  }
+
 
   var html = "<b>"
   html += "Name: " + req.body.name + "<br>";
@@ -68,7 +84,7 @@ app.post("/contact", function(req,res) {
 // setup email data with unicode symbols
   let mailOptions = {
     from: req.body.email, // sender address
-    to: 'turnermdavis@gmail.com', // list of receivers
+    to: 'tuveda.webdevs@gmail.com', // list of receivers
     subject: 'New Contact', // Subject line
     text: 'use html mofo', // plain text body
     html: html // html body
@@ -76,12 +92,16 @@ app.post("/contact", function(req,res) {
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
+    if (error) {
+        console.log(error);
+        console.log("we errored!")
+        res.status(500).send('email attempt failed!')
+    } else {
       console.log('Message %s sent: %s', info.messageId, info.response);
+      res.status(200).send("OK");
+    }
   });
-  res.send("OK");
+  res.status(500).send("Unknown errrrrrrror!");
 });
 // -------------------------------------------------
 
