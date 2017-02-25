@@ -23,7 +23,6 @@ var Contact =  React.createClass ({
 	    name: document.querySelector("#name").value,
 	    companyName: document.querySelector("#company-name").value,
 	    email: document.querySelector("#email").value,
-	    attachment: document.querySelector("#attachment").value,
 			description: document.querySelector("#company-description").value,
 			newsletter: document.querySelector("#newsletter").value
 	  })
@@ -81,11 +80,6 @@ var ContactForm = React.createClass ({
 				  <div className="form-group col-md-6">
 				    <label htmlFor="email">Email Address</label>
 				    <input type="email" className="form-control" id="email" placeholder="email@email.com"/>
-				  </div>
-				  <div className="form-group col-md-6">
-				    <label htmlFor="attachment">Attach a File</label>
-				    <input type="file" id="attachment"/>
-				    <p className="help-block">Add Reference Material</p>
 				  </div>
 				  <div className="form-group col-md-12">
 				    <label htmlFor="company-description">Tell Us About Your Company</label>

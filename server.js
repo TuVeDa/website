@@ -50,54 +50,53 @@ app.get("/", function(req, res) {
 
 app.post("/contact", function(req,res) {
   console.log("request body is", req.body);
+  try {
 
-//   axios.get("https://api.heroku.com/apps/sheltered-wave-77248/config-vars",
-//   {
-//     headers: { "Accept" : "application/vnd.heroku+json; version=3"}
-//   }).then(function(response) {
-//     console.log(response);
-//   }).catch(function(error) {
-//     console.log(error);
-//   })
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL,
+        pass: process.env.GMAIL_PASSWORD
+      }
+    });
 
+    var html = "<b>"
+    html += "Name: " + req.body.name + "<br>";
+    html += "Company Name: " + req.body.companyName + "<br>";
+    html += "Email: " + req.body.email + "<br>";
+    html += "Company Description: " + req.body.description + "<br>";
+    html += "Subscribe to Newsletter: " + req.body.newsletter + "<br>";
+    html += "</b>"
 
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL,
-      pass: process.env.GMAIL_PASSWORD
+  // setup email data with unicode symbols
+    let mailOptions = {
+      from: req.body.email, // sender address
+      to: 'tuveda.webdevs@gmail.com', // list of receivers
+      subject: 'New Contact', // Subject line
+      text: 'use html mofo', // plain text body
+      html: html // html body
+    };
+
+    function mailCallback(status) {
+      res.status(status).send();
     }
-  });
-
-  var html = "<b>"
-  html += "Name: " + req.body.name + "<br>";
-  html += "Company Name: " + req.body.companyName + "<br>";
-  html += "Email: " + req.body.email + "<br>";
-  html += "Company Description: " + req.body.description + "<br>";
-  html += "Subscribe to Newsletter: " + req.body.newsletter + "<br>";
-  html += "</b>"
-
-// setup email data with unicode symbols
-  let mailOptions = {
-    from: req.body.email, // sender address
-    to: 'tuveda.webdevs@gmail.com', // list of receivers
-    subject: 'New Contact', // Subject line
-    text: 'use html mofo', // plain text body
-    html: html // html body
-  };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
         console.log(error);
         console.log("we errored!")
         res.status(500).send('email attempt failed!')
-    } else {
-      console.log('Message %s sent: %s', info.messageId, info.response);
-      res.status(200).send("OK");
-    }
-  });
-  res.status(500).send("Unknown errrrrrrror!");
+        mailCallback(500);
+
+      } else {
+        console.log('Message %s sent: %s', info.messageId, info.response);
+        res.status(200).send("OK");
+        mailCallback(200)
+      }
+    });
+  } catch(err){
+    res.status(500).send("Unknown Error");
+  }
 });
 // -------------------------------------------------
 
