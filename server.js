@@ -48,9 +48,9 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-// app.post("/contact", function(req,res) {
-//   console.log("request body is", req.body);
-//
+app.post("/contact", function(req,res) {
+  console.log("request body is", req.body);
+
 //   axios.get("https://api.heroku.com/apps/sheltered-wave-77248/config-vars",
 //   {
 //     headers: { "Accept" : "application/vnd.heroku+json; version=3"}
