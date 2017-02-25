@@ -81,8 +81,8 @@ h1 {
     position: absolute;
     width: auto;
     height: auto;
-    background-image: url("../img/cubes.jpg");
-    background-size: cover; 
+    background: #C0C0C0 url("../img/cubes.jpg") no-repeat fixed center;
+    /*background-size: cover; */
 }
 
 .titleRow{
@@ -114,10 +114,10 @@ h1 {
 /* Team Page */
 
 #teamRow{
-	position: absolute;
+	/*position: absolute;
 	top: 50%;
-  	transform: translateY(-50%);
-  	margin: 0 10px 0 10px;
+  	transform: translateY(-50%);*/
+  	margin: 0 2em 0 2em;
 }
 
 .sectionTitle{
