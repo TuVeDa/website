@@ -7,24 +7,27 @@ var Team = React.createClass({
 		return (
 			<div id="teamRow">
 				<h1 className="row sectionTitle" >Our Team</h1>
+				
 				<div className="row" id="profileRow">
-					<div className="col-sm-4 profileBox" id="leftBox">
+					<div className="col-sm-4 col-lg-6 profileBox" id="leftBox">
 						<img src="img/blankProf.png" className="profilePic" id="turner"/>
-						<h4 className="teamMate">Turner</h4>
+						<h4 className="teammate">Turner</h4>
 						<p className="subheading">Web Developer</p>
-						<p>Chocolate gummi bears I love danish sweet roll. Wafer wafer toffee I love chocolate bar. Bear claw icing donut cookie tart gummies jujubes I love tart. </p>
+						<p className="teammateBlurb">Chocolate gummi bears I love danish sweet roll. Wafer wafer toffee I love chocolate bar. Bear claw icing donut cookie tart gummies jujubes I love tart. </p>
 					</div>
-					<div className="col-sm-4 profileBox" id="middleBox">
+					
+					<div className="col-sm-4 col-lg-6 profileBox" id="middleBox">
 						<img src="img/blankProf.png" className="profilePic" id="veev"/>
-						<h4 className="teamMate">Veev</h4>
+						<h4 className="teammate">Veev</h4>
 						<p className="subheading">Web Developer</p>
-						<p>I love tart gummi bears. Brownie apple pie bear claw icing jujubes croissant candy canes ice cream. I love biscuit chocolate bar caramels. </p>
+						<p className="teammateBlurb">I love tart gummi bears. Brownie apple pie bear claw icing jujubes croissant candy canes ice cream. I love biscuit chocolate bar caramels. </p>
 					</div>
-					<div className="col-sm-4 profileBox" id="rightBox">
+					
+					<div className="col-sm-4 col-lg-12 profileBox" id="rightBox">
 						<img src="img/blankProf.png" className="profilePic" id="david"/>
-						<h4 className="teamMate">David</h4>
+						<h4 className="teammate">David</h4>
 						<p className="subheading">SEO Specialist</p>
-						<p>Caramels cheesecake I love pudding I love jelly beans halvah lollipop. Sugar plum jelly-o lollipop. Carrot cake cookie pie muffin cake lollipop. </p>
+						<p className="teammateBlurb">Caramels cheesecake I love pudding I love jelly beans halvah lollipop. Sugar plum jelly-o lollipop. Carrot cake cookie pie muffin cake lollipop. </p>
 					</div>
 				</div>
 			</div>

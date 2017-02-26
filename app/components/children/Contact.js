@@ -67,7 +67,7 @@ var ContactForm = React.createClass ({
 	render: function() {
 		return (
 			<div>
-				<h1 className="row">Contact Us</h1>
+				<h1 className="row sectionTitle">Contact Us</h1>
 				<form className="row" onSubmit={this.props.submitContact}>
 				  <div className="form-group col-md-6">
 				    <label htmlFor="name">Name</label>
@@ -106,8 +106,8 @@ var Confirmation = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">{this.props.showConfirmationHeader}</h1>
-        <div className="row">{this.props.showConfirmationText}</div>
+				<h1 className="row sectionTitle">{this.props.showConfirmationHeader}</h1>
+        		<div className="row">{this.props.showConfirmationText}</div>
 			</div>
 		)
 	}

@@ -67,7 +67,6 @@ SECTION: navbar
 /* 
 
 SECTION: child container 
-
 **(in main with navbag)**
 
 */
@@ -81,7 +80,11 @@ SECTION: child container
   	align-items: center; 	
 }
 
-/* landing page section */
+/* 
+
+SECTION: landing page
+
+*/
 
 #landingWindow{
     top: 50px;
@@ -91,8 +94,9 @@ SECTION: child container
     position: absolute;
     width: auto;
     height: auto;
-    background: #C0C0C0 url("../img/cubes.jpg") no-repeat fixed center;
-    /*background-size: cover; */
+    /*background: #C0C0C0 url("../img/cubes.jpg") no-repeat fixed center;
+    background-size: cover; */
+    /*background: #C0C0C0;*/
 }
 
 .titleRow{
@@ -102,7 +106,6 @@ SECTION: child container
   	left: 50%;
   	transform: translate(-50%, -50%);
   	text-align: center;
-  	opacity: 1.0;
 }	
 
 #landingTitle{
@@ -116,8 +119,7 @@ SECTION: child container
 }
 
 #subTitle{
-	color: #0A45F9;
-	opacity: 1.0;
+	color: #808080;
 }
 
 
@@ -128,15 +130,14 @@ SECTION: Team page, about us
 */
 
 #teamRow{
-	/*position: absolute;
-	top: 50%;
-  	transform: translateY(-50%);*/
   	margin: 0 2em 0 2em;
 }
 
 .sectionTitle{
-	font-size: 4em;
+	font-size: 3em;
 	margin-bottom: 1em;
+	color: #02DAF8;
+	/*opacity: 0.8;*/
 }
 
 
@@ -154,10 +155,25 @@ SECTION: Team page, about us
 	border-radius: 10em;
 	margin: auto;
 	display: block;
+	box-shadow: 0px 0px 35px grey;
 }
 
-.teamMate{
+.teammate{
 	margin-bottom: 2px;
+	color: #0A45F9;
+	/*opacity: 0.8;*/
+}
+
+.subheading{
+	margin-bottom: 0px;
+	font-style: italic;
+	color: #02DAF8;
+	/*opacity: 0.8;*/
+}
+
+.teammateBlurb{
+	color: #808080;
+	margin-bottom: 2em;
 }
 
 /* 
