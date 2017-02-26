@@ -68,7 +68,8 @@ var ContactForm = React.createClass ({
 		return (
 			<div>
 				<h1 className="row sectionTitle">Contact Us</h1>
-				<form className="row" onSubmit={this.props.submitContact}>
+				
+				<form className="row" id="formRow" onSubmit={this.props.submitContact}>
 				  <div className="form-group col-md-6">
 				    <label htmlFor="name">Name</label>
 				    <input type="text" className="form-control" id="name" placeholder="Your Name"/>
