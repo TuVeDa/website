@@ -7,8 +7,8 @@ var React = require("react");
 // Creating the Results component
 var Main = React.createClass({
 	// getInitialState: function(){
-	// 	return { 
-			
+	// 	return {
+
 	// 	};
 	// },_
 	// Here we render the function
@@ -46,7 +46,6 @@ var Main = React.createClass({
 		          {this.props.children}
 
 		        </div>
-
 			</div>
 		);
 	}
