@@ -238,5 +238,36 @@ SECTION: contact page
 */
 
 #formRow{
-	margin: 3em 2em 0 2em;
+	margin: 3em 0 0 0;
+}
+
+#formRow label{
+	color: #808080;
+}
+
+#formRow button{
+	background-color: #0A45F9;
+	color: white;
+	box-shadow: 0px 0px 5px grey;
+}
+
+#formRow button:hover{
+	background-color: #02DAF8;
+	color: #808080;
+}
+
+.form-control{
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-radius: 0px;
+}
+
+.form-control:focus{
+	box-shadow: none;
+	border-bottom: 2px solid #02DAF8;
+}
+
+#newsletter{
+	margin-bottom: 2em;
 }
