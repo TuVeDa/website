@@ -135,8 +135,10 @@ SECTION: Team page, about us
 
 .sectionTitle{
 	font-size: 3em;
+	font-
 	margin-bottom: 1em;
 	color: #02DAF8;
+	text-shadow: 0px 0px 6px #C0C0C0;
 	/*opacity: 0.8;*/
 }
 
