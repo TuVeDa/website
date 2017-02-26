@@ -101,15 +101,15 @@ SECTION: landing page
     position: absolute;
     width: auto;
     height: auto;
-    /*background: #C0C0C0 url("../img/cubes.jpg") no-repeat fixed center;
-    background-size: cover; */
+    background: #C0C0C0 url("../img/gears2.jpg") no-repeat fixed center;
+    background-size: 100% 100%; 
     /*background: #C0C0C0;*/
 }
 
 .titleRow{
 	/*height: 100%;*/
 	position: absolute;
-  	top: 50%;
+  	top: 35%;
   	left: 50%;
   	transform: translate(-50%, -50%);
   	text-align: center;
@@ -230,6 +230,8 @@ SECTION: Projects, portfolio
 	padding-left: 0;
 	color: #808080;
 }
+
+
 
 /* 
 

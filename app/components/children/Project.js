@@ -11,15 +11,15 @@ var Project = React.createClass({
 				<div className="row" id="projectRow">
 					
 					{/* Veev's site */}
-					<div className="col-md-6 projectBox" id="leftProject">			
+					<div className="col-sm-12 col-md-6 projectBox" id="leftProject">			
 						<h4 className="projectTitle">Professional Portfolio</h4>
 						<p className="row projectBlurb">Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
 						
 						<div className="row projectInfo">
-							<div className="col-sm-8 ">
+							<div className="col-sm-8 col-lg-7">
 								<img src="img/blankProf.png" className="screenShot" id="veevSite"/>
 							</div>
-							<div className="col-sm-4">
+							<div className="col-sm-4 col-lg-5">
 								<h5 className="projectSubTitle">Technologies Used</h5>
 								<ul className="technologies">
 									<li>Brownie</li>
@@ -32,15 +32,15 @@ var Project = React.createClass({
 					</div>
 					
 					{/* Turner's Color Picker */}
-					<div className="col-md-6 projectBox" id="rightProject">
+					<div className="col-sm-12 col-md-6 projectBox" id="rightProject">
 						<h4 className="projectTitle">Professional Portfolio</h4>
 						<p className="row projectBlurb">Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
 						
 						<div className="row projectInfo">
-							<div className="col-sm-8">
+							<div className="col-sm-8 col-lg-7">
 								<img src="img/blankProf.png" className="screenShot" id="veevSite"/>
 							</div>
-							<div className="col-sm-4">
+							<div className="col-sm-4 col-lg-5">
 								<h5 className="projectSubTitle">Technologies Used</h5>
 								<ul className="technologies">
 									<li>Brownie</li>
