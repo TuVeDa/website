@@ -7,7 +7,7 @@ var Team = React.createClass({
 		return (
 			<div id="teamRow">
 				<h1 className="row sectionTitle" >Our Team</h1>
-				<div className="row" id="profRow">
+				<div className="row" id="profileRow">
 					<div className="col-sm-4 profileBox" id="leftBox">
 						<img src="img/blankProf.png" className="profilePic" id="turner"/>
 						<h4 className="teamMate">Turner</h4>

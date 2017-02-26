@@ -156,6 +156,10 @@ SECTION: Team page, about us
 	display: block;
 }
 
+.teamMate{
+	margin-bottom: 2px;
+}
+
 /* 
 
 SECTION: Projects, portfolio 
