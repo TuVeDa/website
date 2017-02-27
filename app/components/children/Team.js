@@ -24,7 +24,7 @@ var Team = React.createClass({
 					</div>
 					
 					<div className="col-sm-4 col-lg-12 profileBox" id="rightBox">
-						<img src="img/DPF0.JPG" className="profilePic" id="david"/>
+						<img src="img/david.jpg" className="profilePic" id="david"/>
 						<h4 className="teammate">David</h4>
 						<p className="subheading">SEO Specialist</p>
 						<p className="teammateBlurb">As TuVeDa’s SEO and marketing specialist, David maximizes your web application’s traffic with customized strategies tailored to your audience and business goals.</p>
