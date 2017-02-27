@@ -5,26 +5,29 @@ var Team = React.createClass({
 
 	render: function(){
 		return (
-			<div>
-				<h1 className="row">Our Team</h1>
-				<div className="row" id="profRow">
-					<div className="col-md-4 profileBox" id="leftBox">
-						<img src="img/blankProf.png" className="profilePic" id="turner"/>
-						<h4>Turner</h4>
+			<div id="teamRow">
+				<h1 className="row sectionTitle" >Our Team</h1>
+				
+				<div className="row" id="profileRow">
+					<div className="col-sm-4 col-lg-6 profileBox" id="leftBox">
+						<img src="img/tDavis1.jpg" className="profilePic" id="turner"/>
+						<h4 className="teammate">Turner</h4>
 						<p className="subheading">Web Developer</p>
-						<p>Chocolate gummi bears I love danish sweet roll. Wafer wafer toffee I love chocolate bar. Bear claw icing donut cookie tart gummies jujubes I love tart. </p>
+						<p className="teammateBlurb">As TuVeDa’s back end engineer, Turner creates efficient systems and stable functionality with advanced technologies like Ruby on Rails, SQL and Javascript frameworks.</p>
 					</div>
-					<div className="col-md-4 profileBox" id="middleBox">
-						<img src="img/blankProf.png" className="profilePic" id="veev"/>
-						<h4>Veev</h4>
+					
+					<div className="col-sm-4 col-lg-6 profileBox" id="middleBox">
+						<img src="img/veev.jpg" className="profilePic" id="veev"/>
+						<h4 className="teammate">Veev</h4>
 						<p className="subheading">Web Developer</p>
-						<p>I love tart gummi bears. Brownie apple pie bear claw icing jujubes croissant candy canes ice cream. I love biscuit chocolate bar caramels. </p>
+						<p className="teammateBlurb">As TuVeDa’s web designer and front end developer, Veev creates elegant and engaging UI/UX with cutting edge tools like React, Bootstrap and CSS frameworks.</p>
 					</div>
-					<div className="col-md-4 profileBox" id="rightBox">
-						<img src="img/blankProf.png" className="profilePic" id="david"/>
-						<h4>David</h4>
+					
+					<div className="col-sm-4 col-lg-12 profileBox" id="rightBox">
+						<img src="img/david.jpg" className="profilePic" id="david"/>
+						<h4 className="teammate">David</h4>
 						<p className="subheading">SEO Specialist</p>
-						<p>Caramels cheesecake I love pudding I love jelly beans halvah lollipop. Sugar plum jelly-o lollipop. Carrot cake cookie pie muffin cake lollipop. </p>
+						<p className="teammateBlurb">As TuVeDa’s SEO and marketing specialist, David maximizes your web application’s traffic with customized strategies tailored to your audience and business goals.</p>
 					</div>
 				</div>
 			</div>

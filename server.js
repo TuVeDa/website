@@ -52,7 +52,7 @@ app.post("/contact", function(req,res) {
   console.log("request body is", req.body);
   try {
 
-    let transporter = nodemailer.createTransport({
+    var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.GMAIL,
@@ -69,7 +69,7 @@ app.post("/contact", function(req,res) {
     html += "</b>"
 
   // setup email data with unicode symbols
-    let mailOptions = {
+    var mailOptions = {
       from: req.body.email, // sender address
       to: 'tuveda.webdevs@gmail.com', // list of receivers
       subject: 'New Contact', // Subject line

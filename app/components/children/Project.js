@@ -6,65 +6,50 @@ var Project = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h1 className="row">Project</h1>
+				<h1 className="row sectionTitle">Project</h1>
+				
 				<div className="row" id="projectRow">
+					
 					{/* Veev's site */}
-					<div className="col-md-6" id="leftProject">
-						{/*<div class="card">
-						  <img class="card-img-top" src="..." alt="Card image cap"/>
-						  <div class="card-block">
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>*/}
-						<img src="img/blankProf.png" className="screenShot" id="veevSite"/>
-						<h4>Veev's Site</h4>
+					<div className="col-sm-12 col-md-6 projectBox" id="leftProject">			
+						<h4 className="projectTitle">Sprout Patterns</h4>
+						<p className="row projectBlurb">A sister company of Spoonflower, Sprout Patterns provides users with the unique experience of designing a piece of clothing online.</p>
 						
-						<p>Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
-						<h5>Technologies Used</h5>
-						<div className="row"  >
-							<ul className="col-md-4 technologies">
-								<li>Candy</li>
-								<li>Gummies</li>
-								<li>Marshmallow</li>
-							</ul>
-							<ul className="col-md-4 technologies">
-								<li>Brownie</li>
-								<li>Lollipop</li>
-								<li>Tiramisu</li>
-							</ul>
-							<ul className="col-md-4 technologies">
-								<li>Jujubes</li>
-								<li>Jelly Beans</li>
-								<li>Icing</li>
-							</ul>
+						<div className="row projectInfo">
+							<div className="col-sm-8 col-lg-7">
+								<a target="_blank" href="https://sproutpatterns.com/"><img src="img/sproutPatterns.png" className="screenShot" id="colorPicker"/></a>
+							</div>
+							<div className="col-sm-4 col-lg-5">
+								<h5 className="projectSubTitle">Technologies Used</h5>
+								<ul className="technologies">
+									<li>Ruby on Rails</li>
+									<li>jQuery</li>
+									<li>Three.js</li>
+									<li>Image Magick</li>
+								</ul>
+							</div>
 						</div>
 					</div>
+					
 					{/* Turner's Color Picker */}
-					<div className="col-md-6" id="rightProject">
-						<img src="img/blankProf.png" className="screenShot" id="colorPicker"/>
-						<h4>Turner's Color Picker</h4>
+					<div className="col-sm-12 col-md-6 projectBox" id="rightProject">
+						<h4 className="projectTitle">Professional Portfolio</h4>
+						<p className="row projectBlurb">Built for a young full stack developer, this professional portfolio gives a memorable impression with a vibrant design and intuitive layout. </p>
 						
-						<p>Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
-						
-						<h5>Technologies Used</h5>
-						<div className="row"  >
-							<ul className="col-md-4 technologies">
-								<li>Candy</li>
-								<li>Gummies</li>
-								<li>Marshmallow</li>
-							</ul>
-							<ul className="col-md-4 technologies">
-								<li>Brownie</li>
-								<li>Lollipop</li>
-								<li>Tiramisu</li>
-							</ul>
-							<ul className="col-md-4 technologies">
-								<li>Jujubes</li>
-								<li>Jelly Beans</li>
-								<li>Icing</li>
-							</ul>
+						<div className="row projectInfo">
+							<div className="col-sm-8 col-lg-7">
+								<a target="_blank" href="https://contygm.github.io/"><img src="img/veevSite.png" className="screenShot" id="veevSite"/></a>
+							</div>
+							<div className="col-sm-4 col-lg-5">
+								<h5 className="projectSubTitle">Technologies Used</h5>
+								<ul className="technologies">
+									<li>Materialize</li>
+									<li>JavaScript</li>
+									<li>HTML/CSS</li>
+									<li>jQuery</li>
+								</ul>
+							</div>
 						</div>
-						
 					</div>
 				</div>
 			</div>
