@@ -26,7 +26,7 @@ var Main = React.createClass({
 						        <span className="icon-bar"></span>
 						        <span className="icon-bar"></span>
 						    </button>
-					      	<a id="title" className="navbar-brand" href="#/Landing">TUVEDA</a>
+					      	<a id="title" className="navbar-brand" href="#/Landing">TuVēDa</a>
 					    </div>
 
 					    {/*Collect the nav links, forms, and other content for toggling */}
