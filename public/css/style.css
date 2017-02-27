@@ -128,6 +128,8 @@ SECTION: landing page
 
 #subTitle{
 	color: #808080;
+	font-size: 26px;
+	font-style: italic;
 }
 
 
@@ -258,10 +260,16 @@ SECTION: contact page
 	color: #808080;
 }
 
+#formRow button:active{
+	background-color: #808080;
+	color: #02DAF8;
+}
+
 .form-control{
 	border-right: none;
 	border-left: none;
 	border-top: none;
+	box-shadow: none;
 	border-radius: 0px;
 }
 

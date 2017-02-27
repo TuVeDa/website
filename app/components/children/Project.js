@@ -13,19 +13,19 @@ var Project = React.createClass({
 					{/* Veev's site */}
 					<div className="col-sm-12 col-md-6 projectBox" id="leftProject">			
 						<h4 className="projectTitle">Professional Portfolio</h4>
-						<p className="row projectBlurb">Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
+						<p className="row projectBlurb">A sister company of Spoonflower, Sprout Patterns provides users with the unique experience of designing a piece of clothing online.</p>
 						
 						<div className="row projectInfo">
 							<div className="col-sm-8 col-lg-7">
-								<img src="img/blankProf.png" className="screenShot" id="veevSite"/>
+								<img src="img/spoonflower.png" className="screenShot" id="colorPicker"/>
 							</div>
 							<div className="col-sm-4 col-lg-5">
 								<h5 className="projectSubTitle">Technologies Used</h5>
 								<ul className="technologies">
-									<li>Brownie</li>
-									<li>Lollipop</li>
-									<li>Tiramisu</li>
-									<li>Gummies</li>
+									<li>Ruby on Rails</li>
+									<li>jQuery</li>
+									<li>Three.js</li>
+									<li>Image Magick</li>
 								</ul>
 							</div>
 						</div>
@@ -34,19 +34,19 @@ var Project = React.createClass({
 					{/* Turner's Color Picker */}
 					<div className="col-sm-12 col-md-6 projectBox" id="rightProject">
 						<h4 className="projectTitle">Professional Portfolio</h4>
-						<p className="row projectBlurb">Soufflé cheesecake bonbon oat cake pudding cake chocolate. Sugar plum I love soufflé gummies. Sweet caramels muffin pudding cupcake. Dessert chocolate cake cookie chocolate cake danish bear claw bonbon muffin lollipop.</p>
+						<p className="row projectBlurb">Built for a young full stack developer, this professional portfolio gives a memorable impression with a vibrant design and intuitive layout. </p>
 						
 						<div className="row projectInfo">
 							<div className="col-sm-8 col-lg-7">
-								<img src="img/blankProf.png" className="screenShot" id="veevSite"/>
+								<img src="img/veevSite.png" className="screenShot" id="veevSite"/>
 							</div>
 							<div className="col-sm-4 col-lg-5">
 								<h5 className="projectSubTitle">Technologies Used</h5>
 								<ul className="technologies">
-									<li>Brownie</li>
-									<li>Lollipop</li>
-									<li>Tiramisu</li>
-									<li>Gummies</li>
+									<li>Materialize</li>
+									<li>JavaScript</li>
+									<li>HTML/CSS</li>
+									<li>jQuery</li>
 								</ul>
 							</div>
 						</div>

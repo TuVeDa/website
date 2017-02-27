@@ -15,7 +15,7 @@ var Landing = React.createClass({
 						<span>D</span>
 						<span className="lowerCase">a</span>
 					</h1>
-					<p id="subTitle">Brownie macaroon carrot cake. Icing I love soufflé oat cake macaroon. Chupa chups gummies sesame snaps caramels I love cupcake carrot cake. </p>
+					<p id="subTitle">Your SEO, Your Website, Your Business</p>
 				</div>
 				
 			</div>
