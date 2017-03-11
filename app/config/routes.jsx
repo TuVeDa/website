@@ -19,11 +19,11 @@ var hashHistory = router.hashHistory;
 var IndexRoute = router.IndexRoute;
 
 // Reference the high-level components
-var Main = require("../components/Main");
-var Landing = require("../components/children/Landing");
-var Contact = require("../components/children/Contact");
-var Project = require("../components/children/Project");
-var Team = require("../components/children/Team");
+var Main = require("../components/Main.jsx");
+var Landing = require("../components/children/Landing.jsx");
+var Contact = require("../components/children/Contact.jsx");
+var Project = require("../components/children/Project.jsx");
+var Team = require("../components/children/Team.jsx");
 
 
 // Export the Routes
