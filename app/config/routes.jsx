@@ -19,13 +19,12 @@ var hashHistory = router.hashHistory;
 var IndexRoute = router.IndexRoute;
 
 // Reference the high-level components
-var Main = require("../components/Main");
-var Landing = require("../components/children/Landing");
-var Contact = require("../components/children/Contact");
-var Project = require("../components/children/Project");
-var Team = require("../components/children/Team");
-var Blog = require("../components/children/Blog");
-
+var Main = require("../components/Main.jsx");
+var Landing = require("../components/children/Landing.jsx");
+var Contact = require("../components/children/Contact.jsx");
+var Project = require("../components/children/Project.jsx");
+var Team = require("../components/children/Team.jsx");
+var Blog = require("../components/children/Blog.jsx");
 
 // Export the Routes
 module.exports = (
@@ -41,6 +40,7 @@ module.exports = (
 	    <Route path="Project" component={Project} />
 	    <Route path="Team" component={Team} />
       <Route path="Blog" component={Blog} />
+
 
   		{/* default route if all else fails */}
     	<IndexRoute component={Landing} />

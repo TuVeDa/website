@@ -1,7 +1,7 @@
 module.exports = {
 
   // This is the entry point or start of our react applicaton
-  entry: "./app/app.js",
+  entry: "./app/app.jsx",
 
   // The plain compiled Javascript will be output into this file
   output: {
@@ -13,7 +13,7 @@ module.exports = {
     loaders: [
       {
         // Only working with files that in in a .js or .jsx extension
-        test: /\.jsx?$/,
+        test: /\.jsx$/,
         // Webpack will only process files in our app folder. This avoids processing
         // node modules and server files unnecessarily
         include: /app/,

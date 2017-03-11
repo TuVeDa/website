@@ -10,8 +10,9 @@ var Main = React.createClass({
 	// 	return {
 
 	// 	};
-	// },
+	// },_
 	// Here we render the function
+
 	render: function() {
 		return (
 			<div>
@@ -26,7 +27,7 @@ var Main = React.createClass({
 						        <span className="icon-bar"></span>
 										<span className="icon-bar"></span>
 						    </button>
-					      	<a id="title" className="navbar-brand" href="#/Landing">TuVeda</a>
+					      	<a id="title" className="navbar-brand" href="#/Landing">TuVēDa</a>
 					    </div>
 
 					    {/*Collect the nav links, forms, and other content for toggling */}
@@ -41,12 +42,12 @@ var Main = React.createClass({
 					</div>
 				</nav>
 
-				<div className="container">
+				<div className="container-fluid" id="childContainer">
 
-          {/* This code will dump the correct Child Component */}
-          {this.props.children}
+		          {/* This code will dump the correct Child Component */}
+		          {this.props.children}
 
-        </div>
+		        </div>
 			</div>
 		);
 	}
