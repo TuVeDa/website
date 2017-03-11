@@ -19,7 +19,7 @@ var Contact =  React.createClass ({
 		var message = "";
 		console.log(e.target);
 		var contact = this;
-		axios.post('/contact', {
+		axios.post('/contact/create', {
 	    name: document.querySelector("#name").value,
 	    companyName: document.querySelector("#company-name").value,
 	    email: document.querySelector("#email").value,
@@ -68,9 +68,9 @@ var ContactForm = React.createClass ({
 		return (
 			<div>
 				<h1 className="row sectionTitle">Contact Us</h1>
-				
+
 				<form className="row" id="formRow" onSubmit={this.props.submitContact}>
-				  <div className="form-group col-xs-12 col-sm-6">    
+				  <div className="form-group col-xs-12 col-sm-6">
 				    <input type="text" className="form-control" id="name" placeholder="First & Last Name"/>
 				  </div>
 				  <div className="form-group col-sm-6">
