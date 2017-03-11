@@ -25,6 +25,8 @@ var Contact = require("../components/children/Contact.jsx");
 var Project = require("../components/children/Project.jsx");
 var Team = require("../components/children/Team.jsx");
 var Blog = require("../components/children/Blog.jsx");
+var Admin = require("../components/children/blogBits/Admin.jsx");
+var Content = require("../components/children/blogBits/Content.jsx");
 
 // Export the Routes
 module.exports = (
@@ -39,7 +41,11 @@ module.exports = (
 	    <Route path="Contact" component={Contact} />
 	    <Route path="Project" component={Project} />
 	    <Route path="Team" component={Team} />
-      <Route path="Blog" component={Blog} />
+      <Route path="Blog" component={Blog} >
+        <Route path="Admin" component={Admin}/>
+        <Route path="Content" component={Content}/>
+        <IndexRoute component={Admin}/>
+      </Route>
 
 
   		{/* default route if all else fails */}
