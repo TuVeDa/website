@@ -4,7 +4,7 @@ var request = require('request');
 var router = express.Router();
 
 //blog routes
-router.get("/posts", function(req,res){
+router.get("/", function(req,res){
 	Post.find({})
 	.sort([["date", "descending"]])
 	.exec(function(err, doc) {
@@ -17,7 +17,7 @@ router.get("/posts", function(req,res){
 	});
 });
 
-router.post("/post/new", function(req,res){
+router.post("/create", function(req,res){
   var post = new Post({
     title: req.body.title,
     date: req.body.date,

@@ -4,12 +4,14 @@ var nodemailer = require('nodemailer');
 var xoauth2 = require("xoauth2");
 var request = require('request');
 var router = express.Router();
+var mongoose = require('mongoose');
+var Client = require("../models/Client");
 
 //contact page routes
 router.post("/create", function(req,res) {
   console.log("request body is", req.body);
-  try {
 
+  try {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -36,7 +38,22 @@ router.post("/create", function(req,res) {
     };
 
     function mailCallback(status) {
-      res.status(status).send();
+
+      var savedClient = new Client({
+        name: req.body.name,
+        companyName: req.body.companyName,
+        email: req.body.email,
+        description: req.body.description,
+        newsletter: req.body.newsletter
+      })
+
+      savedClient.save(function (err){
+        if(err){
+          res.status(500).send();
+        } else {
+          res.status(status).send();
+        }
+      })
     }
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
@@ -49,7 +66,7 @@ router.post("/create", function(req,res) {
       } else {
         console.log('Message %s sent: %s', info.messageId, info.response);
         res.status(200).send("OK");
-        mailCallback(200)
+        mailCallback(200);
       }
     });
   } catch(err){

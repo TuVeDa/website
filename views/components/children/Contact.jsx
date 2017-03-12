@@ -9,22 +9,18 @@ var Contact =  React.createClass ({
 		return {
 			showConfirmation: false,
 			confirmationText : "",
-			confirmationHeader : ""
+			confirmationHeader : "",
 		};
 	},
-
-	submitContact: function(e){
-		e.preventDefault();
-		var form = e.target;
+	submitContact: function(formState){
 		var message = "";
-		console.log(e.target);
 		var contact = this;
 		axios.post('/contact/create', {
-	    name: document.querySelector("#name").value,
-	    companyName: document.querySelector("#company-name").value,
-	    email: document.querySelector("#email").value,
-			description: document.querySelector("#company-description").value,
-			newsletter: document.querySelector("#newsletter").value
+	    name: formState.name,
+	    companyName: formState.companyName,
+	    email: formState.email,
+			description: formState.description,
+			newsletter: formState.newsletter
 	  })
 	  .then(function (response) {
 			console.log(response);
@@ -64,27 +60,56 @@ var Contact =  React.createClass ({
 
 var ContactForm = React.createClass ({
 
+	getInitialState: function() {
+		return {
+			name: "",
+			companyName: "",
+			email: "",
+			description: "",
+			newsletter: false
+		};
+	},
+
+	handleChange: function(event) {
+		var id = event.target.id;
+		console.log("changing field", id);
+		var newState = event.target.value;
+		this.setState({ [id] : newState});
+	},
+
+	handleSubmit: function(event) {
+		event.preventDefault();
+		this.props.submitContact(this.state);
+		this.setState({
+			name: "",
+			companyName: "",
+			email: "",
+			description: "",
+			newsletter: false
+		})
+	},
+
 	render: function() {
 		return (
 			<div>
 				<h1 className="row sectionTitle">Contact Us</h1>
 
-				<form className="row" id="formRow" onSubmit={this.props.submitContact}>
+				<form className="row" id="formRow" onSubmit={this.handleSubmit}>
 				  <div className="form-group col-xs-12 col-sm-6">
-				    <input type="text" className="form-control" id="name" placeholder="First & Last Name"/>
+				    <input type="text" className="form-control" id="name" onChange={this.handleChange} placeholder="First & Last Name"/>
 				  </div>
 				  <div className="form-group col-sm-6">
-				    <input type="text" className="form-control" id="company-name" placeholder="Company Name"/>
+				    <input type="text" className="form-control" id="companyName" onChange={this.handleChange} placeholder="Company Name"/>
 				  </div>
 				  <div className="form-group col-xs-12">
-				    <input type="email" className="form-control" id="email" placeholder="Email"/>
+				    <input type="email" className="form-control" id="email" onChange={this.handleChange} placeholder="Email"/>
 				  </div>
 				  <div className="form-group col-xs-12">
-				    <textarea className="form-control" rows="3" placeholder="Tell Us About Your Company" id="company-description"></textarea>
+				    <textarea className="form-control" rows="3"  id="description" onChange={this.handleChange} placeholder="Tell Us About Your Company"></textarea>
 				  </div>
-				  <div className="checkbox col-xs-12" id="newsletter">
+				  <div className="checkbox col-xs-12" id="newsletter" onChange={this.handleChange}>
 				    <label>
-				      <input type="checkbox"  /> Sign Up for Our Newsletter
+				      <input type="checkbox" onChange={this.handleChange}  /> Sign Up for Our Newsletter
 				    </label>
 				  </div>
 				  <div className="form-group col-xs-12">
